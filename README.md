@@ -29,13 +29,17 @@
 
 - [Table of Contents](#table-of-contents)
 - [About The Project](#about-the-project)
+- [Proposed Architecture](#proposed-architecture)
+- [Preliminary Results](#preliminary-results)
+    - [Text2LIVE](#text2live)
+  - [Stable DreamFusion](#stable-dreamfusion)
 - [Hardware Requirements](#hardware-requirements)
 - [Setup and Usage](#setup-and-usage)
 - [License](#license)
 - [Contributors](#contributors)
     - [Animikh Aich](#animikh-aich)
     - [Himanshu Patil](#himanshu-patil)
-    - [Vedika](#vedika)
+    - [Vedika Srivastava](#vedika-srivastava)
 - [Base Repositories](#base-repositories)
 - [Acknowledgements](#acknowledgements)
 
@@ -49,6 +53,19 @@ This project is a part of the Boston University Course: [GRS CS640 - Artificial 
 
 A wide range of editing effects are now available to content creators thanks to extensive research into changing the appearance and style of objects in photographs. However, majority of the research in this field focuses on global editing rather than localized editing. To address this [Text2LIVE](https://arxiv.org/abs/2209.14988) developed an algorithm with localized editing of images using only text prompt. Given the substantial work being done on 3D objects and the widespread usage of 3D models in CAD-modeling and video games, the same flexibility and range of editing effects ought to be available in 3D. Due to this, we propose Text2LIVE-3D, which gives the same degree of creative control over the appearance and style of 3D models as can be done with 2D photographs.
 
+## Proposed Architecture
+
+![Architecture](assets/proposed-architecture.jpg)
+
+## Preliminary Results
+
+#### Text2LIVE
+
+![Text2LIVE: Cake](assets/text2live-results.jpg)
+
+### Stable DreamFusion
+
+![Stable Dreamfusion: A Gummy Jellyfish](assets/stable-dreamfusion-results.jpg)
 
 ## Hardware Requirements
 
@@ -81,7 +98,7 @@ Distributed under the [GNU AGPL V3 License](https://choosealicense.com/licenses/
 - Email: [hipatil@bu.edu](mailto:hipatil@bu.edu)
 - GitHub: [HiPatil](https://github.com/HiPatil)
 
-#### Vedika 
+#### Vedika Srivastava 
 
 - LinkedIn: [vedika-srivastava](https://www.linkedin.com/in/vedika-srivastava/)
 - Email: [vedikas@bu.edu](mailto:vedikas@bu.edu)
@@ -109,7 +126,7 @@ Our work aims to derive and build on top of the two projects:
 
 Hence, this directory contains a copy of the base repositories for the above.
 - Text2LIVE has an open source official implementation: https://github.com/omerbt/Text2LIVE
-- DreamFusion3D has an open source unofficial implementation with open-source modifications including replacement of [Imagen](https://imagen.research.google/) by [Stable Diffusion](https://github.com/CompVis/stable-diffusion): https://github.com/ashawkey/stable-dreamfusion
+- DreamFusion3D has an open source unofficial implementation with modifications including replacement of [Imagen](https://imagen.research.google/) by [Stable Diffusion](https://github.com/CompVis/stable-diffusion): https://github.com/ashawkey/stable-dreamfusion
 
 ## Acknowledgements
 Everything in this directory is the unmodified version of the code implementations by:
