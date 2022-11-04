@@ -10,14 +10,14 @@
 <p align="center">
     <img src="assets/icon.png" alt="Logo" width="150" height="150">
 
-  <h2 align="center">Text2LIVE-3D (BU GRS CS640 Project 2022)</h2>
+  <h2 align="center">3D-Text2LIVE (BU GRS CS640 Project 2022)</h2>
 
   <p align="center">
     Generate 3D renderings of an existing 2D image by modifying the subject based on a text prompt
     <br />
-    <a href="https://github.com/animikhaich/Text2LIVE-3D/issues/new">Report Bug</a>
+    <a href="https://github.com/animikhaich/3D-Text2LIVE/issues/new">Report Bug</a>
     ·
-    <a href="https://github.com/animikhaich/Text2LIVE-3D/issues/new">Request Feature</a>
+    <a href="https://github.com/animikhaich/3D-Text2LIVE/issues/new">Request Feature</a>
   </p>
 </p>
 <p align="center">
@@ -51,7 +51,7 @@ This project is a part of the Boston University Course: [GRS CS640 - Artificial 
 - [DreamFusion: Text-to-3D using 2D Diffusion](https://arxiv.org/abs/2209.14988)
 - [Text2LIVE: Text-Driven Layered Image and Video Editing](https://arxiv.org/abs/2204.02491)
 
-A wide range of editing effects are now available to content creators thanks to extensive research into changing the appearance and style of objects in photographs. However, majority of the research in this field focuses on global editing rather than localized editing. To address this [Text2LIVE](https://arxiv.org/abs/2209.14988) developed an algorithm with localized editing of images using only text prompt. Given the substantial work being done on 3D objects and the widespread usage of 3D models in CAD-modeling and video games, the same flexibility and range of editing effects ought to be available in 3D. Due to this, we propose Text2LIVE-3D, which gives the same degree of creative control over the appearance and style of 3D models as can be done with 2D photographs.
+A wide range of editing effects are now available to content creators thanks to extensive research into changing the appearance and style of objects in photographs. However, majority of the research in this field focuses on global editing rather than localized editing. To address this [Text2LIVE](https://arxiv.org/abs/2209.14988) developed an algorithm with localized editing of images using only text prompt. Given the substantial work being done on 3D objects and the widespread usage of 3D models in CAD-modeling and video games, the same flexibility and range of editing effects ought to be available in 3D. Due to this, we propose 3D-Text2LIVE, which gives the same degree of creative control over the appearance and style of 3D models as can be done with 2D photographs.
 
 ## Proposed Architecture
 
@@ -104,16 +104,16 @@ Distributed under the [GNU AGPL V3 License](https://choosealicense.com/licenses/
 - Email: [vedikas@bu.edu](mailto:vedikas@bu.edu)
 - GitHub: [VedikaSrivastava](https://github.com/VedikaSrivastava)
 
-[contributors-shield]: https://img.shields.io/github/contributors/animikhaich/Text2LIVE-3D.svg?style=flat-square
-[contributors-url]: https://github.com/animikhaich/Text2LIVE-3D/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/animikhaich/Text2LIVE-3D.svg?style=flat-square
-[forks-url]: https://github.com/animikhaich/Text2LIVE-3D/network/members
-[stars-shield]: https://img.shields.io/github/stars/animikhaich/Text2LIVE-3D.svg?style=flat-square
-[stars-url]: https://github.com/animikhaich/Text2LIVE-3D/stargazers
-[issues-shield]: https://img.shields.io/github/issues/animikhaich/Text2LIVE-3D.svg?style=flat-square
-[issues-url]: https://github.com/animikhaich/Text2LIVE-3D/issues
-[license-shield]: https://img.shields.io/github/license/animikhaich/Text2LIVE-3D.svg?style=flat-square
-[license-url]: https://github.com/animikhaich/Text2LIVE-3D/blob/main/LICENSE
+[contributors-shield]: https://img.shields.io/github/contributors/animikhaich/3D-Text2LIVE.svg?style=flat-square
+[contributors-url]: https://github.com/animikhaich/3D-Text2LIVE/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/animikhaich/3D-Text2LIVE.svg?style=flat-square
+[forks-url]: https://github.com/animikhaich/3D-Text2LIVE/network/members
+[stars-shield]: https://img.shields.io/github/stars/animikhaich/3D-Text2LIVE.svg?style=flat-square
+[stars-url]: https://github.com/animikhaich/3D-Text2LIVE/stargazers
+[issues-shield]: https://img.shields.io/github/issues/animikhaich/3D-Text2LIVE.svg?style=flat-square
+[issues-url]: https://github.com/animikhaich/3D-Text2LIVE/issues
+[license-shield]: https://img.shields.io/github/license/animikhaich/3D-Text2LIVE.svg?style=flat-square
+[license-url]: https://github.com/animikhaich/3D-Text2LIVE/blob/main/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/animikh-aich/
 
