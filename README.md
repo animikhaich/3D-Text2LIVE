@@ -21,7 +21,7 @@
   </p>
 </p>
 <p align="center">
-  <img src="assets/DreamFusion.gif" alt="Demo GIF">
+  <img src="assets/bunny.gif" alt="Demo GIF">
 </p>
 <!-- TABLE OF CONTENTS -->
 
@@ -65,7 +65,7 @@ A wide range of editing effects are now available to content creators thanks to 
 
 ### Stable DreamFusion
 
-![Stable Dreamfusion: A Gummy Jellyfish](assets/stable-dreamfusion-results.jpg)
+![Stable Dreamfusion: A standing stanford bunny](assets/stanford_bunny.jpeg)
 
 ## Hardware Requirements
 
