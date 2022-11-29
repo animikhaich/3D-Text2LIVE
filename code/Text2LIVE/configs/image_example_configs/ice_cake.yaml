@@ -1,5 +1,5 @@
 image_path: "./data/images/cake.jpeg"
 
-screen_text: "ice" # texts, describing the edit layer
-comp_text: "ice" # texts, describing the full edited image
+screen_text: "oreo cake" # texts, describing the edit layer
+comp_text: "oreo cake" # texts, describing the full edited image
 src_text: "cake" # texts, describing the input image
