@@ -54,8 +54,11 @@ def load_blender_data(basedir, half_res=False, testskip=1):
             skip = testskip
             
         for frame in meta['frames'][::skip]:
-            fname = os.path.join(basedir, frame['file_path'] + '.png')
-            imgs.append(imageio.imread(fname))
+            try:
+                fname = os.path.join(basedir, frame['file_path'] + '.png')
+                imgs.append(imageio.imread(fname))
+            except:
+                continue
             poses.append(np.array(frame['transform_matrix']))
         imgs = (np.array(imgs) / 255.).astype(np.float32) # keep all 4 channels (RGBA)
         poses = np.array(poses).astype(np.float32)
