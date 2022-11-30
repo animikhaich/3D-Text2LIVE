@@ -60,8 +60,8 @@ def load_blender_data(basedir, half_res=False, testskip=1):
 			except:
 				continue
 			poses.append(np.array(frame['transform_matrix']))
-		print(np.array(imgs))
-		imgs = (np.array(imgs) / 255.).astype(np.float32) # keep all 4 channels (RGBA)
+		imgs = np.array(imgs).astype(np.float32)
+		imgs =  imgs / 255.0 # keep all 4 channels (RGBA)
 		poses = np.array(poses).astype(np.float32)
 		counts.append(counts[-1] + imgs.shape[0])
 		all_imgs.append(imgs)
