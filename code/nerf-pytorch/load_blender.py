@@ -35,7 +35,7 @@ def pose_spherical(theta, phi, radius):
 
 
 def load_blender_data(basedir, half_res=False, testskip=1):
-	splits = ['train', 'val', 'test']
+	splits = ['train']
 	metas = {}
 	for s in splits:
 		with open(os.path.join(basedir, 'transforms_{}.json'.format(s)), 'r') as fp:
@@ -44,6 +44,7 @@ def load_blender_data(basedir, half_res=False, testskip=1):
 	all_imgs = []
 	all_poses = []
 	counts = [0]
+
 	for s in splits:
 		meta = metas[s]
 		imgs = []
@@ -52,17 +53,16 @@ def load_blender_data(basedir, half_res=False, testskip=1):
 			skip = 1
 		else:
 			skip = testskip
-			
+
 		for frame in meta['frames'][::skip]:
-			try:
-				fname = os.path.join(basedir, frame['file_path'] + '.png')
-				imgs.append(imageio.imread(fname))
-			except:
-				continue
+			fname = os.path.join(basedir, frame['file_path'] + '.png')
+			img = imageio.imread(fname)
+			img = cv2.resize(img, (500, 500), interpolation=cv2.INTER_AREA)
+			imgs.append(img)
 			poses.append(np.array(frame['transform_matrix']))
-		imgs = np.array(imgs).astype(np.float32)
-		imgs =  imgs / 255.0 # keep all 4 channels (RGBA)
-		poses = np.array(poses).astype(np.float32)
+
+		imgs = np.asarray(imgs, dtype=np.float32) / 255
+		poses = np.asarray(poses, dtype=np.float32)
 		counts.append(counts[-1] + imgs.shape[0])
 		all_imgs.append(imgs)
 		all_poses.append(poses)
@@ -83,7 +83,7 @@ def load_blender_data(basedir, half_res=False, testskip=1):
 		W = W//2
 		focal = focal/2.
 
-		imgs_half_res = np.zeros((imgs.shape[0], H, W, 4))
+		imgs_half_res = np.zeros((imgs.shape[0], H, W, 3)) # Why need 4 channels? 
 		for i, img in enumerate(imgs):
 			imgs_half_res[i] = cv2.resize(img, (W, H), interpolation=cv2.INTER_AREA)
 		imgs = imgs_half_res
