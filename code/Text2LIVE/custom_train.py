@@ -10,6 +10,7 @@ import torch
 import yaml
 from tqdm import tqdm
 from glob import glob
+import gc
 
 from datasets.image_dataset import SingleImageDataset
 from models.clip_extractor import ClipExtractor
@@ -75,11 +76,12 @@ def train_model(config):
         lr = optimizer.param_groups[0]["lr"]
         log_data["lr"] = lr
 
-        if config["use_wandb"]:
-            wandb.log(log_data)
-        else:
-            if epoch % config["log_images_freq"] == 0:
-                save_locally(config["results_folder"], log_data)
+        if epoch % config["log_images_freq"] == 0:
+            save_locally(config["results_folder"], log_data)
+
+    del model, dataset, clip_extractor, criterion, optimizer, log_data,
+    torch.cuda.empty_cache()
+    gc.collect()
 
 
 def save_locally(results_folder, log_data):
@@ -101,6 +103,10 @@ if __name__ == "__main__":
         "--example_config",
         default="golden_horse.yaml",
         help="Example config name",
+    )
+    parser.add_argument(
+        "--file_path",
+        help="Enter File Path",
     )
     args = parser.parse_args()
     config_path = args.config
@@ -124,12 +130,11 @@ if __name__ == "__main__":
 
 
     #### CODE TO LOOP THROUGH ALL THE NERF IMAGES ###
-    files = sorted(glob("data/images/train/*.png"))  
-    for i, filepath in enumerate(files):
-        config["image_path"] = filepath
-        run_name = f"{config['image_path'].split('/')[-1]}"
-        path = Path(f"results/{run_name}")
-        config["results_folder"] = str(path)
-        
-        print(f"Processing File: {i+1}/{len(files)} | Completed: {i+1/len(files)*100}%")
-        train_model(config)
+    filepath = args.file_path
+    config["image_path"] = filepath
+    run_name = f"{config['image_path'].split('/')[-1]}"
+    path = Path(f"results/{run_name}")
+    config["results_folder"] = str(path)
+    
+    torch.cuda.empty_cache()
+    train_model(config)
