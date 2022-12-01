@@ -135,3 +135,5 @@ code/stable-dreamfusion/stanford_bunny/
 
 *.out
 *.zip
+
+.DS_Store
