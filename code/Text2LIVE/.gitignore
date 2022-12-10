@@ -1,0 +1,7 @@
+/wandb/
+__pycache__/
+/idea
+results/
+data/
+ship_results/
+.fuse*

@@ -1,0 +1,9 @@
+image_path: "./data/images/train/r_26.png" # path to the input image
+# image_path: "./data/images/349147.jpg" # path to the input image
+
+screen_text: "red color" # texts, describing the edit layer
+comp_text: "bright red colored ship" # texts, describing the full edited image
+src_text: "ship in water" # texts, describing the input image
+
+# bootstrap_text: "ship" # text, describing the region of interest in the input image
+# bootstrap_epoch: 1000 # number of epochs for bootstrapping (it is annealed during training)
