@@ -5,8 +5,8 @@ import numpy as np
 from datetime import timedelta
 
 
-FILES = sorted(glob("data/ship/train/*.png"))
-CONFIG = "nerf_ship.yaml"
+FILES = sorted(glob("/home/ani/Projects/3D-Text2LIVE/data/lego/train/*.png"))
+CONFIG = "nerf_lego.yaml"
 
 
 

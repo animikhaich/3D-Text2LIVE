@@ -137,3 +137,10 @@ code/stable-dreamfusion/stanford_bunny/
 *.zip
 
 .DS_Store
+
+# Dataset
+data
+
+# Models
+*.tar
+*.mp4

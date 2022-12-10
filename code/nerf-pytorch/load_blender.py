@@ -58,7 +58,7 @@ def load_blender_data(basedir, half_res=False, testskip=1):
 		for frame in meta['frames'][::skip]:
 			fname = os.path.join(basedir, frame['file_path'] + '.png')
 			img = imageio.imread(fname)
-			img = cv2.resize(img, (500, 500), interpolation=cv2.INTER_AREA)
+			# img = cv2.resize(img, (500, 500), interpolation=cv2.INTER_AREA)
 			imgs.append(img)
 			poses.append(np.array(frame['transform_matrix']))
 

@@ -85,11 +85,9 @@ def train_model(config):
 
 
 def save_locally(results_folder, log_data):
-    # path = Path(results_folder, str(log_data["epoch"]))
-    # path.mkdir(parents=True, exist_ok=True)
     for key in log_data.keys():
-        if key in ["composite", "alpha", "edit_on_greenscreen", "edit"]:
-            imageio.imwrite(f"{results_folder}-{key}.png", log_data[key])
+        if key == "composite":
+            imageio.imwrite(f"{results_folder}", log_data[key])
 
 
 if __name__ == "__main__":

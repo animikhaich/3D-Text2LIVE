@@ -1,4 +1,4 @@
-seed: -1
+seed: 91241155
 use_wandb: False
 wandb_project: project_name  # enter your project name here
 wandb_entity: project_entity  # enter your entity here
@@ -6,7 +6,7 @@ device: cuda
 log_images_freq: 100
 # dataset configuration
 results_folder: "results"
-resize_input: 500
+resize_input: 800
 d_divisible_crops: 1
 source_image_every: 75
 crops_min_cover: 0.85
@@ -44,7 +44,7 @@ relevancy_num_layers: 10
 clip_affine_transform_fill: 1
 
 # training configuration
-n_epochs: 500
+n_epochs: 1000
 scheduler_policy: exponential # [exponential| linear | step | plateau | cosine | none]
 gamma: 0.99
 min_lr: 0.00001
