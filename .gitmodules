@@ -1,6 +1,0 @@
-# [submodule "base_src/Text2LIVE"]
-# 	path = base_src/Text2LIVE
-# 	url = https://github.com/omerbt/Text2LIVE
-# [submodule "base_src/stable-dreamfusion"]
-# 	path = base_src/stable-dreamfusion
-# 	url = https://github.com/ashawkey/stable-dreamfusion
