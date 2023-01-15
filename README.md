@@ -127,5 +127,5 @@ Distributed under the [GNU AGPL V3 License](https://choosealicense.com/licenses/
 
 ## Acknowledgements
 - [Omer Bar-Tal](https://github.com/omerbt) (Text2LIVE)
-- [Omer Bar-Tal](https://github.com/yenchenlin) (NeRF)
+- [Yen-Chen Lin](https://github.com/yenchenlin) (NeRF)
 - [Kiui - Jiaxiang Tang](https://github.com/ashawkey) (Stable Dreamfusion)
